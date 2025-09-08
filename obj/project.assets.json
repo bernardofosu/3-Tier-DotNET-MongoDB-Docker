@@ -1463,19 +1463,19 @@
     ]
   },
   "packageFolders": {
-    "/home/ubuntu/.nuget/packages/": {}
+    "C:\\Users\\ofosu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ubuntu/DotNetMongoCRUDApp/DotNetMongoCRUDApp.csproj",
+      "projectUniqueName": "D:\\3-Tier-DotNET-MongoDB-Docker\\DotNetMongoCRUDApp.csproj",
       "projectName": "DotNetMongoCRUDApp",
-      "projectPath": "/home/ubuntu/DotNetMongoCRUDApp/DotNetMongoCRUDApp.csproj",
-      "packagesPath": "/home/ubuntu/.nuget/packages/",
-      "outputPath": "/home/ubuntu/DotNetMongoCRUDApp/obj/",
+      "projectPath": "D:\\3-Tier-DotNET-MongoDB-Docker\\DotNetMongoCRUDApp.csproj",
+      "packagesPath": "C:\\Users\\ofosu\\.nuget\\packages\\",
+      "outputPath": "D:\\3-Tier-DotNET-MongoDB-Docker\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/ubuntu/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\ofosu\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1493,6 +1493,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1539,7 +1544,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.107/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.413/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

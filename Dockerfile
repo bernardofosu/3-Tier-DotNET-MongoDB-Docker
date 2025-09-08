@@ -1,23 +1,24 @@
-# Use the official .NET image as a build environment
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
-WORKDIR /app
+# Build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
 
-# Copy the csproj and restore as distinct layers
-COPY *.csproj ./
-RUN dotnet restore
+# (optional) copy solution for better cache
+COPY 3-Tier-DotNET-MongoDB-Docker.sln ./
 
-# Copy the rest of the application and build it
-COPY . ./
-RUN dotnet publish -c Release -o out
+# copy the project file that is in the ROOT
+COPY DotNetMongoCRUDApp.csproj ./
+RUN dotnet restore DotNetMongoCRUDApp.csproj
 
-# Build runtime image
+# copy the rest
+COPY . .
+
+# publish that project explicitly
+RUN dotnet publish DotNetMongoCRUDApp.csproj -c Release -o /app/out
+
+# Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
-COPY --from=build-env /app/out .
-
-# Expose port 5035 for your application
+ENV ASPNETCORE_URLS=http://0.0.0.0:5035
+COPY --from=build /app/out .
 EXPOSE 5035
-
-# Set the entry point
-ENTRYPOINT ["dotnet", "DotNetMongoCRUDApp.dll"]
-
+ENTRYPOINT ["dotnet","DotNetMongoCRUDApp.dll"]

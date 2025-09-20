@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DotNetMongoCRUDApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09abd042cad44bf9f23b514d26f6a537085ae26d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb61a2ee072f35db9d170e70faa9fda33d0b55aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("DotNetMongoCRUDApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DotNetMongoCRUDApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
